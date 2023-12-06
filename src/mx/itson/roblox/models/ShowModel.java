@@ -17,7 +17,7 @@ import mx.itson.roblox.persistence.MySQLConnection;
 
 /**
  *
- * @author alexi
+ * @author laura
  */
 public class ShowModel {
     

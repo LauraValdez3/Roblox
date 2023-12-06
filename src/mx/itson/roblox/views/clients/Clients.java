@@ -13,7 +13,7 @@ import mx.itson.roblox.models.ClientModel;
 
 /**
  *
- * @author alexi
+ * @author laura
  */
 public class Clients extends javax.swing.JDialog {
 

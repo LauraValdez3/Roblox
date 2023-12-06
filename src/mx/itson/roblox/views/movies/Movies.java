@@ -13,7 +13,7 @@ import mx.itson.roblox.models.MovieModel;
 
 /**
  *
- * @author alexi
+ * @author laura
  */
 public class Movies extends javax.swing.JDialog {
 
@@ -123,6 +123,11 @@ public class Movies extends javax.swing.JDialog {
         btnDelete.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnDeleteMouseClicked(evt);
+            }
+        });
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
             }
         });
 
@@ -264,6 +269,10 @@ public class Movies extends javax.swing.JDialog {
         }
 
     }//GEN-LAST:event_btnUpdateMouseClicked
+
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDeleteActionPerformed
 
     /**
      * @param args the command line arguments

@@ -9,7 +9,7 @@ import java.sql.DriverManager;
 
 /**
  *
- * @author alexi
+ * @author laura
  */
 public class MySQLConnection {
     
@@ -20,7 +20,7 @@ public class MySQLConnection {
     public static Connection get(){
         Connection connection =null;
         try{
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/cine_db","root","12345");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/cine_db","root","");
         }catch(Exception ex){
             System.err.print("Error: "+ex.getMessage());
         }

@@ -15,7 +15,7 @@ import mx.itson.roblox.persistence.MySQLConnection;
 
 /**
  *
- * @author alexi
+ * @author laura
  */
 public class RoomModel {
     
@@ -74,17 +74,17 @@ public class RoomModel {
     
     /**
      * Add a new room to the database
-     * @param roomType of the new room
+     * @param threeD  of the new room
      * @param capacity of the new room
      * @return boolean where if true, a new room has been successfully added to the database and if false, a failure has occurred
      */
-    public static boolean save(String roomType, int capacity){
+    public static boolean save(boolean threeD, int capacity){
         boolean result = false;
         try {
             Connection connection = MySQLConnection.get();
             String query ="INSERT INTO rooms (room_type, capacity) VALUES (?, ?)";
             PreparedStatement statament = connection.prepareStatement(query);
-            statament.setString(1, roomType);
+            statament.setBoolean(1, threeD);
             statament.setInt(2, capacity);
             statament.execute();            
             result = statament.getUpdateCount() == 1;

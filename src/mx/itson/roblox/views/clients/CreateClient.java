@@ -9,7 +9,7 @@ import mx.itson.roblox.models.ClientModel;
 
 /**
  *
- * @author alexi
+ * @author laura
  */
 public class CreateClient extends javax.swing.JDialog {
 

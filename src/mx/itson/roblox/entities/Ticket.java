@@ -6,7 +6,7 @@ package mx.itson.roblox.entities;
 
 /**
  *
- * @author alexi
+ * @author laura
  */
 public class Ticket {
     

@@ -6,7 +6,7 @@ package mx.itson.roblox.entities;
 
 /**
  *
- * @author alexi
+ * @author laura
  */
 public class Movie {
     
@@ -17,6 +17,21 @@ public class Movie {
     private String classification;
     private String actors;
     private String language;
+
+    public Movie(int id, String name, String description, int duration, String classification, String actors, String language) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.duration = duration;
+        this.classification = classification;
+        this.actors = actors;
+        this.language = language;
+    }
+
+    public Movie() {
+    }
+    
+    
 
     /**
      * @return the id

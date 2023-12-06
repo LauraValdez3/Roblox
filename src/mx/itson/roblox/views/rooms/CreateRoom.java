@@ -9,7 +9,7 @@ import mx.itson.roblox.models.RoomModel;
 
 /**
  *
- * @author alexi
+ * @author laura
  */
 public class CreateRoom extends javax.swing.JDialog {
 
@@ -113,12 +113,12 @@ public class CreateRoom extends javax.swing.JDialog {
 
     private void btnAddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddMouseClicked
 
-        String roomType=txfRoomType.getText();
-        String roomTypeEmpty=roomType.replaceAll(" ", "");
+        String threeD =txfRoomType.getText();
+        String roomTypeEmpty=threeD.replaceAll(" ", "");
 
         if(!(roomTypeEmpty.length()==0 || txfCapacity.getText().length()==0 )){
             int capacity = Integer.parseInt(txfCapacity.getText());
-            if(RoomModel.save(roomType, capacity)){
+            if(RoomModel.save(threeD, capacity)){
                 dispose();
             }else{
                 JOptionPane.showMessageDialog(this, "No se ha podido registrar al usuario");

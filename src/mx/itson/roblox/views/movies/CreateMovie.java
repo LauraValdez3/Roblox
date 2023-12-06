@@ -5,11 +5,12 @@
 package mx.itson.roblox.views.movies;
 
 import javax.swing.JOptionPane;
+import mx.itson.roblox.entities.Movie;
 import mx.itson.roblox.models.MovieModel;
 
 /**
  *
- * @author alexi
+ * @author laura
  */
 public class CreateMovie extends javax.swing.JDialog {
 
@@ -21,6 +22,7 @@ public class CreateMovie extends javax.swing.JDialog {
         initComponents();
     }
 
+    Movie movie = new Movie();
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -202,7 +204,7 @@ public class CreateMovie extends javax.swing.JDialog {
         String langguageEmty=language.replaceAll(" ", "");
         if(!(nameEmpty.length()==0 || descriptionEmpty.length()==0 || txfDuration.getText().length()==0 || classificationEmpty.length()==0 || actorsEmpty.length()==0 || langguageEmty.length()==0)){
             int duration = Integer.parseInt(txfDuration.getText());
-            if(MovieModel.save(name, description, duration, classification, actors, language)){
+            if(MovieModel.save(movie)){
                 dispose();
             }else{
                 JOptionPane.showMessageDialog(this, "No se ha podido registrar al usuario");

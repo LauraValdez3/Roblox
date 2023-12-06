@@ -15,7 +15,7 @@ import mx.itson.roblox.persistence.MySQLConnection;
 
 /**
  *
- * @author alexi
+ * @author laura
  */
 public class MovieModel {
     
@@ -81,26 +81,21 @@ public class MovieModel {
     
     /**
      * Add a new movie to the database
-     * @param name of the new Movie
-     * @param description of the new Movie
-     * @param duration of the new Movie
-     * @param classification of the new Movie
-     * @param actors of the new Movie
-     * @param language of the new Movie
+     * @param movie is the new movie
      * @return boolean where if true, a new movie has been successfully added to the database and if false, a failure has occurred
      */
-    public static boolean save(String name, String description, int duration, String classification, String actors, String language){
+    public static boolean save(Movie movie){
         boolean result = false;
         try {
             Connection connection = MySQLConnection.get();
             String query ="INSERT INTO movies (name, description, duration, classification, actors, language) VALUES (?, ?, ?, ?, ?, ?)";
             PreparedStatement statament = connection.prepareStatement(query);
-            statament.setString(1, name);
-            statament.setString(2, description);
-            statament.setInt(3, duration);
-            statament.setString(4, classification);
-            statament.setString(5, actors);
-            statament.setString(6, language);
+            statament.setString(1, movie.getName());
+            statament.setString(2, movie.getDescription());
+            statament.setInt(3, movie.getDuration());
+            statament.setString(4, movie.getClassification());
+            statament.setString(5, movie.getActors());
+            statament.setString(6, movie.getLanguage());
             statament.execute();
             
             result = statament.getUpdateCount() == 1;

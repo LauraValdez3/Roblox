@@ -6,56 +6,55 @@ package mx.itson.roblox.entities;
 
 /**
  *
- * @author alexi
+ * @author laura
  */
 public class Room {
     
     private int id;
     private String roomType;
     private int capacity;
+    private boolean threeD;
+    private boolean disponobility;
+    
 
-    /**
-     * @return the id
-     */
+    public boolean isDisponobility() {
+        return disponobility;
+    }
+
+    public void setDisponobility(boolean disponobility) {
+        this.disponobility = disponobility;
+    }
+
     public int getId() {
         return id;
     }
 
-    /**
-     * @param id the id to set
-     */
     public void setId(int id) {
         this.id = id;
     }
 
-    /**
-     * @return the roomType
-     */
     public String getRoomType() {
         return roomType;
     }
 
-    /**
-     * @param roomType the roomType to set
-     */
     public void setRoomType(String roomType) {
         this.roomType = roomType;
     }
 
-    /**
-     * @return the capacity
-     */
     public int getCapacity() {
         return capacity;
     }
 
-    /**
-     * @param capacity the capacity to set
-     */
     public void setCapacity(int capacity) {
         this.capacity = capacity;
     }
-    
-    
+
+    public boolean isThreeD() {
+        return threeD;
+    }
+
+    public void setThreeD(boolean threeD) {
+        this.threeD = threeD;
+    }
     
 }

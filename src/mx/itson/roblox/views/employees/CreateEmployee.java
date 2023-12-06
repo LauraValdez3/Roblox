@@ -9,7 +9,7 @@ import mx.itson.roblox.models.EmployeeModel;
 
 /**
  *
- * @author alexi
+ * @author laura
  */
 public class CreateEmployee extends javax.swing.JDialog {
 

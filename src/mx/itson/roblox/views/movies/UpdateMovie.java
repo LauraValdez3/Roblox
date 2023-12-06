@@ -10,7 +10,7 @@ import mx.itson.roblox.models.MovieModel;
 
 /**
  *
- * @author alexi
+ * @author laura
  */
 public class UpdateMovie extends javax.swing.JDialog {
 
